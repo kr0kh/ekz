@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: sans-serif; margin: 0; padding: 10px; }
+        header, section, footer { padding: 15px; border: 1px solid #ccc; margin-bottom: 10px; }
+        
+        /* Адаптация для мобильных: если экран узкий, блоки идут друг под другом */
+
+@media screen and (max-width: 600px) {
+            body { padding: 5px; background-color: red }
+        }
+
+     
+    </style>
+</head>
+<body>
+    <header><h1>Кафе "Студент"</h1></header>
+    
+    <nav>Главная | Меню | Контакты</nav>
+
+    <main>
+        <section>
+            <h2>Наше меню</h2>
+            <article>Кофе - 100р</article>
+            <article>Сэндвич - 150р</article>
+        </section>
+
+        <section>
+            <h2>Акции</h2>
+            <p>Скидка 20% после 15:00!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Адрес: ул. Студенческая, 1</p>
+        <p>Работаем: 09:00 - 20:00</p>
+    </footer>
+	<button id="btn">Нажми, чтобы узнать секрет</button>
+<script>
+    document.getElementById('btn').onclick = function() {
+        alert('Сегодня скидка на пирожки!');
+    };
+</script>
+</body>
+</html>
