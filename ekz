@@ -4,45 +4,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * { box-sizing: border-box; }
-        body { font-family: sans-serif; margin: 0; padding: 10px; }
+        html { scroll-behavior: smooth; } 
+        body { font-family: sans-serif; margin: 50px; padding: 50px;}
         header, section, footer { padding: 15px; border: 1px solid #ccc; margin-bottom: 10px; }
+	section { margin-top: 10%;}
+	#contacts { margin-top: 10%;}
         
-        /* Адаптация для мобильных: если экран узкий, блоки идут друг под другом */
+        
+        
+       
+        section { scroll-margin-top: 10px; }
 
-@media screen and (max-width: 600px) {
+	@media screen and (max-width: 600px) {
             body { padding: 5px; background-color: red }
         }
-
-     
     </style>
 </head>
 <body>
+
     <header><h1>Кафе "Студент"</h1></header>
     
-    <nav>Главная | Меню | Контакты</nav>
+    <nav>
+        <a href="#menu">Меню</a> | 
+        <a href="#promo">Акции</a> | 
+        <a href="#contacts">Контакты</a>
+    </nav>
 
     <main>
-        <section>
+        <section id="menu">
             <h2>Наше меню</h2>
             <article>Кофе - 100р</article>
             <article>Сэндвич - 150р</article>
         </section>
 
-        <section>
+        <section id="promo">
             <h2>Акции</h2>
             <p>Скидка 20% после 15:00!</p>
         </section>
     </main>
 
-    <footer>
+    <footer id="contacts">
         <p>Адрес: ул. Студенческая, 1</p>
         <p>Работаем: 09:00 - 20:00</p>
     </footer>
-	<button id="btn">Нажми, чтобы узнать секрет</button>
-<script>
-    document.getElementById('btn').onclick = function() {
-        alert('Сегодня скидка на пирожки!');
-    };
-</script>
+
+    <button id="btn">Нажми, чтобы узнать секрет</button>
+    <script>
+        document.getElementById('btn').onclick = function() {
+            alert('Сегодня скидка на пирожки!');
+        };
+    </script>
 </body>
 </html>
